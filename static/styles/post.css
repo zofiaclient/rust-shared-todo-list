@@ -1,0 +1,28 @@
+.new-post-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    align-items: center;
+}
+
+*:focus {
+    outline: none;
+}
+
+input,
+textarea {
+    width: 20%;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid teal;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: none;
+    min-height: 10em;
+}
+
+#error-text {
+    color: darkred;
+}

@@ -1,0 +1,9 @@
+target/
+
+.idea/
+*.iml
+
+Cargo.lock
+
+posts.json
+Server.toml

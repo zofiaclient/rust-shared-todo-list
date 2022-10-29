@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Home - Shared Todo List</title>
+
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/view.css">
+        <link rel="stylesheet" href="styles/loader.css">
+
+        <script src="scripts/fetch.js" defer></script>
+    </head>
+
+    <body class="space-between full">
+        <div>
+            <nav>
+                <span>
+                    Shared Todo List
+                </span>
+            </nav>
+    
+            <div align="center">
+                <div class="loader"></div>
+            
+                <ul id="cards">
+                </ul>
+
+                <h2 class="default-hidden show-on-empty">There are currently no posts.</h2>
+        
+                <p><a href="/post.html" id="new-post-button"><button>+</button></a></p>
+                <sub class="default-hidden show-on-empty">Be the first to post one!</sub>
+            </div>
+        </div>
+        <footer>
+            <p>Find this repository on <a href="https://github.com/imajindevon/rust-shared-todo-list">GitHub</a>.</p>
+        </footer>
+    </body>
+</html>

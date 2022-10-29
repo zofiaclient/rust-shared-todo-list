@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>New Post - Shared Todo List</title>
+
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/post.css">
+
+        <script src="scripts/post.js"></script>
+    </head>
+
+    <body class="space-between full">
+        <div>
+            <nav>
+                <span>
+                    Create a New Post
+                </span>
+            </nav>
+    
+            <div class="new-post-container">
+                <input type="text" id="username-field" placeholder="Username">
+                <input type="text" id="title-field" placeholder="Post title">
+                <textarea placeholder="Post description..." id="description-field"></textarea>
+    
+                <button type="submit" onclick="post()">Submit</button>
+
+                <p id="error-text"></p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Find this repository on <a href="https://github.com/imajindevon/rust-shared-todo-list">GitHub</a>.</p>
+        </footer>
+    </body>
+</html>
