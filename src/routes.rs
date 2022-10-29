@@ -1,6 +1,6 @@
 use crate::item::TodoItem;
+use actix_web::get;
 use actix_web::web::Json;
-use actix_web::{get, post};
 use actix_web_validator::Query;
 use linked_hash_set::LinkedHashSet;
 use once_cell::sync::OnceCell;

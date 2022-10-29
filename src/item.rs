@@ -1,17 +1,13 @@
-static TODO: Lazy<Mutex<LinkedHashSet<TodoItem>>> = Lazy::new(|| Mutex::new(LinkedHashSet::new()));
+use serde::{Deserialize, Serialize};
+use validator::Validate;
 
-#[derive(Hash, PartialEq, Eq, Clone, Serialize, Deserialize, Validate)]
+#[derive(Clone, Debug, Deserialize, Eq, Hash, PartialEq, Serialize, Validate)]
 pub struct TodoItem {
-    #[validate(custom = "validation::is_valid_author")]
-    author: String,
+    #[validate(custom = "crate::validation::is_valid_author")]
+    pub author: String,
 
-    #[validate(custom = "validation::is_valid_title")]
-    title: String,
+    #[validate(custom = "crate::validation::is_valid_title")]
+    pub title: String,
 
-    description: String,
-}
-
-pub fn acquire_posts<'a>() -> MutexGuard<'a, LinkedHashSet<TodoItem>> {
-    TODO.lock()
-        .expect("Could not acquire lock on TODO because the Mutex was poisoned")
+    pub description: String,
 }
