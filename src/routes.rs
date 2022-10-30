@@ -32,6 +32,7 @@ pub async fn post(character_limit: usize, item: Query<TodoItem>) -> &'static str
 }
 
 #[get("/view")]
-pub async fn view() -> Json<Vec<TodoItem>> {
-    Json(acquire_posts().clone().into_iter().collect())
+pub async fn view() -> Json<String> {
+    let data = serde_json::to_string(&*acquire_posts()).unwrap();
+    Json(data)
 }
